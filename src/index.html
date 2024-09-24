@@ -13,7 +13,43 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body class="container bg-success">
-    <button id="refresh" class="btn btn-dark">New card</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Random Card Generator</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <label>Widht</label>
+              <input
+                class="picker me-3 border bg-ligh"
+                for="widht"
+                type="text"
+              />
+            </li>
+            <li class="nav-item">
+              <label>Height</label>
+              <input
+                class="picker me-3 border bg-ligh"
+                for="height"
+                type="text"
+              />
+            </li>
+          </ul>
+          <button id="refresh" class="btn btn-dark">New card</button>
+        </div>
+      </div>
+    </nav>
     <div class="d-flex justify-content-center">
       <div id="card" class="card row bg-white">
         <div class="col-2 position-absolute top-0 start-0">
