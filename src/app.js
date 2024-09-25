@@ -20,19 +20,6 @@ window.onload = function() {
   });
 };
 
-/*
-const cardWidht = document.getElementById("widht");
-const log = document.getElementById("valores");
-
-cardWidht.addEventListener("width", updateValue);
-
-function updateValue(cardWidht) {
-  if (cardWidht != null && cardWidht != 0) {
-    ocument.getElementById("widht").style.widht = card.widht + "vw";
-  }
-}
-  */
-
 function generateCard() {
   let value = [
     "A",
@@ -66,3 +53,21 @@ function generateCard() {
   document.getElementById("suiteTop").innerHTML = suitCard[randomSuitCard];
   document.getElementById("suiteBottom").innerHTML = suitCard[randomSuitCard];
 }
+
+function handleInput(e) {
+  const inputWidth = document.getElementById("inputWidth").value;
+  if (inputWidth != null && inputWidth != 0) {
+    document.getElementById("card").style.width = inputWidth + "vw";
+  } else {
+    document.getElementById("card").style.width = "29vw";
+  }
+
+  const inputHeight = document.getElementById("inputHeight").value;
+  if (inputHeight != null && inputHeight != 0) {
+    document.getElementById("card").style.height = inputHeight + "vw";
+  } else {
+    document.getElementById("card").style.height = "40vw";
+  }
+}
+document.getElementById("inputWidth").addEventListener("blur", handleInput);
+document.getElementById("inputHeight").addEventListener("blur", handleInput);
